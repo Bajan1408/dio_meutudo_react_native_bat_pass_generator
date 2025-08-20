@@ -1,17 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Text, View } from 'react-native';
-import { styles } from './Styles';
+import { styles } from './HomeStyles';
 import BatLogo from '../../components/BatLogo/Batlogo';
+import BatPassInput from '../../components/BatPassInput/BatPassInput';
+import BatButton from '../../components/BatButton/BatButton';
 
 export default function Home() {
     return (
-        <View style={styles.container}>
-            <View>
+        <View style={styles.appContainer}>
+            <View style={styles.logoContainer}>
                 <BatLogo />
             </View>
+            <View style={styles.btnContainer}>
+                <BatButton />
+            </View>
             
-            <Text>Minha primeira screen em react-native.. Agora com tudo no component Home.. Após separação do estilo..</Text>
             <StatusBar style="auto" />
         </View>
     )
